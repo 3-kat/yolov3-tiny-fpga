@@ -1,0 +1,9 @@
+exp_16_8_s_f_x_lsbkb
+exp_16_8_s_exp_x_cud
+exp_16_8_s_exp_x_dEe
+yolo_yolo_top_sdieOg
+yolo_yolo_top_CTRL_BUS_s_axi
+regslice_core
+exp_16_8_s
+logistic_activate
+yolo_yolo_top

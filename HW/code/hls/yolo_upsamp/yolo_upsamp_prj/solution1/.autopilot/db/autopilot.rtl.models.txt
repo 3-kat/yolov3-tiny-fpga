@@ -1,0 +1,6 @@
+yolo_upsamp_top_mfYi
+yolo_upsamp_top_mg8j
+yolo_upsamp_top_lbkb
+yolo_upsamp_top_CTRL_BUS_s_axi
+regslice_core
+yolo_upsamp_top

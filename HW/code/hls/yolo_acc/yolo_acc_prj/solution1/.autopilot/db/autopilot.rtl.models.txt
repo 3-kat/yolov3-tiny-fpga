@@ -1,0 +1,7 @@
+yolo_acc_top_mul_bkb
+yolo_acc_top_mul_dEe
+yolo_acc_top_kerncud
+yolo_acc_top_CTRL_BUS_s_axi
+regslice_core
+post_process_unit
+yolo_acc_top

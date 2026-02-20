@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="yolo_app" location="/home/kal-thir/workspace/yolo_app" platform="/home/kal-thir/workspace/zedboard_platform/export/zedboard_platform/zedboard_platform.xpfm" platformUID="xilinx:zed::0.0(custom)" systemProject="yolo_app_system" sysConfig="zedboard_platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" language="CPP" mssSignature="196808d23708a7efd88e89c4399e5a9e">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1090827586" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.544216428" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

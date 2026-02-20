@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# xsim v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Jan 25 20:04:27 2026
+# Process ID: 28924
+# Current directory: /home/kal-thir/Downloads/Tiny_YOLO_v3_ZYNQ/code/hls/yolo_max_pool/yolo_max_pool_prj/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/yolo_max_pool_top/xsim_script.tcl}
+# Log file: /home/kal-thir/Downloads/Tiny_YOLO_v3_ZYNQ/code/hls/yolo_max_pool/yolo_max_pool_prj/solution1/sim/verilog/xsim.log
+# Journal file: /home/kal-thir/Downloads/Tiny_YOLO_v3_ZYNQ/code/hls/yolo_max_pool/yolo_max_pool_prj/solution1/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/yolo_max_pool_top/xsim_script.tcl
+# xsim {yolo_max_pool_top} -autoloadwcfg -tclbatch {yolo_max_pool_top.tcl}
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source yolo_max_pool_top.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "13845665000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 13845705 ns : File "/home/kal-thir/Downloads/Tiny_YOLO_v3_ZYNQ/code/hls/yolo_max_pool/yolo_max_pool_prj/solution1/sim/verilog/yolo_max_pool_top.autotb.v" Line 492
+run: Time (s): cpu = 00:00:00.02 ; elapsed = 00:01:39 . Memory (MB): peak = 1444.418 ; gain = 0.000 ; free physical = 1299 ; free virtual = 14430
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Jan 25 20:06:16 2026...

@@ -1,0 +1,10 @@
+2026-02-13T20:06:35.9566800255-20:06:35 **** Incremental Build of configuration Debug for project yolo_app_system ****
+000-make all 
+000-Generating bif file for the system project
+000-Executing command '::scw::generate_bif -xpfm /home/kal-thir/workspace/zedboard_platform/export/zedboard_platform/zedboard_platform.xpfm -domains standalone_domain -bifpath /home/kal-thir/workspace/yolo_app_system/Debug/system.bif' on XSCT
+000-sdcard_gen --xpfm /home/kal-thir/workspace/zedboard_platform/export/zedboard_platform/zedboard_platform.xpfm --sys_config zedboard_platform --bif /home/kal-thir/workspace/yolo_app_system/Debug/system.bif --bitstream /home/kal-thir/workspace/yolo_app/_ide/bitstream/design_1_wrapper.bit --elf /home/kal-thir/workspace/yolo_app/Debug/yolo_app.elf,ps7_cortexa9_0
+000-creating BOOT.BIN using /home/kal-thir/workspace/yolo_app/_ide/bitstream/design_1_wrapper.bit
+000-Running /home/kal-thir/tools/Xilinx/Vitis/2019.2/bin/bootgen  -image /home/kal-thir/workspace/yolo_app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+00255-
+20:06:43 Build Finished (took 7s.548ms)
+

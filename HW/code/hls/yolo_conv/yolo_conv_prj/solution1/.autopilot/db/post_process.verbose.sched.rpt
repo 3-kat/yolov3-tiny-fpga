@@ -1,0 +1,132 @@
+
+
+================================================================
+== Vivado HLS Report for 'post_process'
+================================================================
+* Date:           Sun Jan 25 20:10:45 2026
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        yolo_conv_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 7.50 ns | 4.371 ns |   0.94 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        1|        1| 7.500 ns | 7.500 ns |    1|    1| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.37>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%val_output_V_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %val_output_V)" [src/yolo_conv.cpp:210]   --->   Operation 3 'read' 'val_output_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%input_ch_idx_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %input_ch_idx)" [src/yolo_conv.cpp:210]   --->   Operation 4 'read' 'input_ch_idx_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%sub3_val_output_V_re = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %sub3_val_output_V)" [src/yolo_conv.cpp:210]   --->   Operation 5 'read' 'sub3_val_output_V_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%sub2_val_output_V_re = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %sub2_val_output_V)" [src/yolo_conv.cpp:210]   --->   Operation 6 'read' 'sub2_val_output_V_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%sub1_val_output_V_re = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %sub1_val_output_V)" [src/yolo_conv.cpp:210]   --->   Operation 7 'read' 'sub1_val_output_V_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%sub0_val_output_V_re = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %sub0_val_output_V)" [src/yolo_conv.cpp:210]   --->   Operation 8 'read' 'sub0_val_output_V_re' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.30ns)   --->   "%icmp_ln213 = icmp eq i4 %input_ch_idx_read, 0" [src/yolo_conv.cpp:213]   --->   Operation 9 'icmp' 'icmp_ln213' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.69ns)   --->   "%p_Val2_s = select i1 %icmp_ln213, i32 0, i32 %val_output_V_read" [src/yolo_conv.cpp:213]   --->   Operation 10 'select' 'p_Val2_s' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln703_9 = add i32 %sub2_val_output_V_re, %sub3_val_output_V_re" [src/yolo_conv.cpp:221]   --->   Operation 11 'add' 'add_ln703_9' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 12 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln703_10 = add i32 %add_ln703_9, %sub1_val_output_V_re" [src/yolo_conv.cpp:221]   --->   Operation 12 'add' 'add_ln703_10' <Predicate = true> <Delay = 4.37> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 2 <SV = 1> <Delay = 4.37>
+ST_2 : Operation 13 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln703_8 = add i32 %p_Val2_s, %sub0_val_output_V_re" [src/yolo_conv.cpp:221]   --->   Operation 13 'add' 'add_ln703_8' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 14 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln703 = add i32 %add_ln703_10, %add_ln703_8" [src/yolo_conv.cpp:221]   --->   Operation 14 'add' 'add_ln703' <Predicate = true> <Delay = 4.37> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "ret i32 %add_ln703" [src/yolo_conv.cpp:241]   --->   Operation 15 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 7.5ns, clock uncertainty: 0.938ns.
+
+ <State 1>: 4.37ns
+The critical path consists of the following:
+	wire read on port 'sub3_val_output_V' (src/yolo_conv.cpp:210) [9]  (0 ns)
+	'add' operation ('add_ln703_9', src/yolo_conv.cpp:221) [16]  (0 ns)
+	'add' operation ('add_ln703_10', src/yolo_conv.cpp:221) [17]  (4.37 ns)
+
+ <State 2>: 4.37ns
+The critical path consists of the following:
+	'add' operation ('add_ln703_8', src/yolo_conv.cpp:221) [15]  (0 ns)
+	'add' operation ('add_ln703', src/yolo_conv.cpp:221) [18]  (4.37 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

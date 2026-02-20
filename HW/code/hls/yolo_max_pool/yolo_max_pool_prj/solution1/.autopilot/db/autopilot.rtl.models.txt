@@ -1,0 +1,7 @@
+yolo_max_pool_topjbC
+yolo_max_pool_topbkb
+yolo_max_pool_top_CTRL_BUS_s_axi
+regslice_core
+window_max_pool
+write_output
+yolo_max_pool_top

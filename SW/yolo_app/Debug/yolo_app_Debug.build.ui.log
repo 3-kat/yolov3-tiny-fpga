@@ -1,0 +1,33 @@
+2026-02-14T11:09:32.96964900255-11:09:32 **** Incremental Build of configuration Debug for project yolo_app ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000- 
+000-make --no-print-directory main-build
+000-Building file: ../src/yolo_sys.cpp
+000-Invoking: ARM v7 g++ compiler
+000-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/yolo_sys.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/kal-thir/workspace/zedboard_platform/export/zedboard_platform/sw/zedboard_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/yolo_sys.d" -MT"src/yolo_sys.o" -o "src/yolo_sys.o" "../src/yolo_sys.cpp"
+000-In file included from ../src/yolo_sys.cpp:53:
+000/zedboard_platform/export/zedboard_platform/sw/zedboard_platform/standalone_domain/bspinclude/include/xtime_l.h85-1-1#pragma message: For the sleep routines, Global timer is being used0-/home/kal-thir/workspace/zedboard_platform/export/zedboard_platform/sw/zedboard_platform/standalone_domain/bspinclude/include/xtime_l.h:85:70: note: #pragma message: For the sleep routines, Global timer is being used
+000- #pragma message ("For the sleep routines, Global timer is being used")
+000-                                                                      ^
+000-../src/yolo_sys.cpp: In function 'void forward_layer_group(layer_group)':
+000/yolo_app/src/yolo_sys.cpp474-1-1-Wmisleading-indentation is disabled from this point onwards, since column-tracking was disabled due to the size of the code/headers0-../src/yolo_sys.cpp:474: note: -Wmisleading-indentation is disabled from this point onwards, since column-tracking was disabled due to the size of the code/headers
+000-                     Xil_DCacheFlushRange((u32)(&l.inputs[l.input_size*j]),l.input_size*sizeof(short));
+000- 
+000-../src/yolo_sys.cpp: In function 'int main()':
+000/yolo_app/src/yolo_sys.cpp756-1-1too many arguments for format [-Wformat-extra-args]1-../src/yolo_sys.cpp:756: warning: too many arguments for format [-Wformat-extra-args]
+000-     printf("End",count,group_13.output_size*group_13.output_fold_factor);
+000- 
+000-Finished building: ../src/yolo_sys.cpp
+000- 
+000-Building target: yolo_app.elf
+000-Invoking: ARM v7 g++ linker
+000-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/kal-thir/workspace/zedboard_platform/export/zedboard_platform/sw/zedboard_platform/standalone_domain/bsplib/lib -o "yolo_app.elf" ./src/yolo_sys.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+000/yolo_app31-1-1syntax error2-/home/kal-thir/tools/Xilinx/Vitis/2019.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld:../src/lscript.ld:31: syntax error
+000-collect2: error: ld returned 1 exit status
+000/yolo_app0-1-1make[1]: *** [makefile:55: yolo_app.elf] Error 12-make[1]: *** [makefile:55: yolo_app.elf] Error 1
+000/yolo_app0-1-1make: *** [makefile:46: all] Error 22-make: *** [makefile:46: all] Error 2
+00255-
+11:10:15 Build Finished (took 42s.579ms)
+
