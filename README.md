@@ -66,7 +66,7 @@ Real-time object detection using YOLOv3-Tiny neural network accelerated on Xilin
 ##  Detection Result
 
 <p align="center">
-  <img src="sample_prediction.jpeg" alt="Detection Result" width="500"/>
+  <img src="sample_prediction.jpg" alt="Detection Result" width="500"/>
 </p>
 
 ---
